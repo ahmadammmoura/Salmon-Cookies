@@ -1,8 +1,10 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
-    margin-top: 15%;
+    width: 80%;
+    margin-top: 10%;
+    transition: 1s;
+    margin-left: 10%;
   }
   
   td, th {
@@ -10,7 +12,67 @@ table {
     text-align: left;
     padding: 8px;
   }
+
+  table:hover{
+    transform: scale(1.2);
+  }
   
   tr:nth-child(even) {
     background-color: #dddddd;
+  }
+
+  ul.nav {
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:50px; line-height:50px;
+    background:#0d7963; /* you can change the backgorund color here. */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+  }
+  ul.nav li {
+    border-right:1px solid #189b80; /* you can change the border color matching to your background color */
+    float:left;
+  }
+  ul.nav a {
+    display:block;
+    padding:0 28px;
+    color:#ccece6;
+    text-decoration:none;
+  }
+  ul.nav a:hover,
+  ul.nav li.current a {
+    background:#086754;
+  }
+
+  .arrow{
+    transform: rotate(-90deg);
+    width: 100px;
+    margin-left: 100px;
+    background: transparent;
+  }
+
+  h1{
+    font-size: 30px;
+    font-family: 'Dela Gothic One', cursive;
+    margin-left: 200px;
+    
+  }
+  .ss{
+    font-size: 30px;
+    font-family: 'Dela Gothic One', cursive;
+    margin-left: 300px;
+    margin-top: 10px;
+  }
+  .sss{
+    font-size: 30px;
+    font-family: 'Dela Gothic One', cursive;
+    margin-left: 400px;
+    margin-top: 10px;
+  }
+  .ssss{
+    font-size: 30px;
+    font-family: 'Dela Gothic One', cursive;
+    margin-left: 500px;
+    margin-top: 10px;
   }
