@@ -3,7 +3,7 @@
 
 let timeAndLocation = ['Location','6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 pm','3 pm','4 pm','5 pm','6 pm','7 pm','8 pm','Total'];
 const dayTotal = [];
-const done = [];
+let done =[];
 
 const tableHeader = function(){
   const table = document.getElementById('table');
@@ -17,13 +17,17 @@ const tableHeader = function(){
 tableHeader();
 
 
-const Locations = function(minNumber,maxNumber,avg,cityName,time){
+const Locations = function(minNumber,maxNumber,avg,cityName){
   this.minNumber = minNumber;
   this.maxNumber = maxNumber;
   this.avg = avg;
   this.cookeisHour = [cityName];
-  this.timeByHours = time;
+  this.timeByHours = timeAndLocation;
   dayTotal.push(this);
+  document.getElementById('minNumber').value='';
+  document.getElementById('maxNumber').value='';
+  document.getElementById('Average').value='';
+  document.getElementById('cityName').value='';
 };
 
 
@@ -78,13 +82,27 @@ Locations.prototype.total = function(){
   done.push(sum);
   return sum;
 };
-let Seattle= new Locations(23,65,6.3,'Seattle',timeAndLocation);
+let Seattle= new Locations(23,65,6.3,'Seattle');
 let Tokyo= new Locations(3,24,1.2,'Tokyo',timeAndLocation);
 let Dubai= new Locations(11,38,3.7,'Dubai',timeAndLocation);
 let Paris= new Locations(20,38,2.3,'Paris',timeAndLocation);
 let Lima= new Locations(2,16,4.6,'Lima',timeAndLocation);
 
+let form = document.getElementById('form');
+form.addEventListener('submit',addNewLocation);
 
+function addNewLocation(event){
+  event.preventDefault();
+  let minNumber = event.target.minNumber.value;
+  let maxNumber = event.target.maxNumber.value;
+  let Average = event.target.Average.value;
+  let cityName = event.target.cityName.value;
+
+  let addLocation = new Locations(minNumber,maxNumber,Average,cityName);
+  deleteElement();
+  addLocation.renderRows();
+  footer1();
+}
 
 Seattle.renderRows();
 Tokyo.renderRows();
@@ -92,41 +110,35 @@ Dubai.renderRows();
 Paris.renderRows();
 Lima.renderRows();
 
-
-
+footer1();
+function deleteElement(){
+  let el = document.getElementById('delete');
+  el.remove();
+}
 //footer total
 
-let sum = 0;
-let nums = [];
-
-for (let i = 0; i < dayTotal[0].cookeisHour.length; i++){
-  sum = dayTotal[0].cookeisHour[i] + dayTotal[1].cookeisHour[i]+dayTotal[2].cookeisHour[i] +dayTotal[3].cookeisHour[i]+dayTotal[4].cookeisHour[i];
-  nums.push(sum);
-}
-
-console.log(done);
-
-
-let sumDone =0;
-
-footer1();
-footer2();
-
 function footer1(){
+  let totalOfCookeis = 0;
   const table = document.getElementById('table');
   const tr = document.createElement('tr');
+  tr.setAttribute('id','delete');
   table.appendChild(tr);
-  const td = document.createElement('td');
-  // tr.appendChild(td).textContent = 'Total';
-  nums[0] = 'Total';
-  for(let i = 0; i < nums.length;i++){
-    const td = document.createElement('td');
-    tr.appendChild(td).textContent = nums[i];
+  let td = document.createElement('td');
+  tr.appendChild(td).textContent= 'Total';
+
+  for (let i = 1; i < 16; i++){
+    let sum = 0;
+    for(let j = 0;j<dayTotal.length;j++){
+      sum = sum + dayTotal[j].cookeisHour[i] ;
+    }
+
+    let td = document.createElement('td');
+    tr.appendChild(td).textContent = sum ;
+    totalOfCookeis = totalOfCookeis + sum;
+
   }
-  for(let i = 0; i < done.length;i++){
-    sumDone = sumDone + done[i];
-  }
-  tr.appendChild(td).textContent = sumDone;
+  const totalTd = document.createElement('td');
+  tr.appendChild(totalTd).textContent = totalOfCookeis ;
 }
 
 

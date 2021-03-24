@@ -1,8 +1,11 @@
+body{
+  background-color: #f1f1f1;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    margin-top: 10%;
+    margin-top: 5%;
     transition: 1s;
     margin-left: 10%;
   }
@@ -12,7 +15,12 @@ table {
     text-align: left;
     padding: 8px;
   }
-
+  .hours {
+    font-size: 50pt;
+    padding: 100px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
   table:hover{
     transform: scale(1.2);
   }
@@ -76,3 +84,124 @@ table {
     margin-left: 500px;
     margin-top: 10px;
   }
+  .formContainer{
+    width: 80%;
+  }
+
+  form{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 30px;
+  }
+
+  input[type=submit] {
+    width: 10%;
+    background-color: #0d7963;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  label[for=cityName] {
+  margin-right: 15px;
+  }
+  main {
+    padding-top: 90px;
+  }
+  .container{
+    width: 100%;
+    background-color: #f1f1f1;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .container img{
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+  }
+
+  .locations{
+    width: 40%;
+    float: left;
+    background-color: #f1f1f1;
+    margin-left: 30px;
+  }
+
+  .locations p {
+        font-size: 27px;
+  }
+  .locations h1{
+  margin-left: 0;
+  }
+
+  .btn {
+    background-color: #0d7963;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .btn:hover {
+    border-radius: 5px;
+  }  
+
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: black;
+    height: 1000px;
+
+  }
+
+  .about-section h1{
+    margin-left: 0px;
+    font-size: 50px;
+  }
+
+
+  .about-section p {
+    margin-top: 25px;
+  }
+  .clr{
+    clear: both;
+  }
+  
+  .container .images{
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .images img{
+    width: 20%;
+    margin-top: 20px;
+  }
+
+  .contacth3 {
+    color: #270722;
+    font-size: 20pt;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.history {
+    font-size: 15pt;
+    color: #270722;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.contactlink {
+    text-decoration: none;
+    color: #270722;
+}
