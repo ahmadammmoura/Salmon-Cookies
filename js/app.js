@@ -142,3 +142,9 @@ function footer1(){
 }
 
 
+window.addEventListener('scroll',function(){
+  const scroller = document.getElementById('parallax');
+  let scrollPosition = window.pageYOffset;
+
+  scroller.style.transform = 'translateY(' + scrollPosition *.5 + 'px)';});
+

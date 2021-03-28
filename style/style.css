@@ -1,207 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+}
 body{
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 100% 0% 100% 0% / 20% 80% 20% 80% ; */
+  position: relative;
+  overflow: hidden;
+}
+.hero2{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 100% 0% 100% 0% / 20% 80% 20% 80% ; */
+  position: relative;
+  overflow: hidden;
+}
+.hero3{
+  width: 100%;
+  margin-top: 50px;
+
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 100% 0% 100% 0% / 20% 80% 20% 80% ; */
+  position: relative;
+  overflow: hidden;
+}
+.text-wrapper{
+  text-align: center;
+}
+
+.headline{
+  font-size: 15rem;
+  font-family: 'Herr Von Muellerhoff', cursive;
+  color: #c59d5f;
+  line-height: .4;
+  font-weight: 100;
+}
+.headline ::first-letter{
+  font-size: 20rem;
+}
+.sub-headline{
+  font-size: 10rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform:  uppercase;
+  color: #fff;
+}
+.parallax2{
+  position: absolute;
+  /* border-radius: 100% 0% 100% 0% / 20% 80% 20% 80% ; */
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.parallax{
+  position: absolute;
+  border-radius: 100% 0% 100% 0% / 0% 80% 40% 70% ;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.overflow{
+  height: 65vh;
+  width: 100%;
+}
+
+.overflow .img {
+  width: 30%;
+  margin-top: 50px;
+  float: left;
+}
+.overflow .img img {
+  width: 100%;
+  float: left;
+  margin-left: 40%;
+}
+
+.overflow .about {
+  width: 30%;
+  float: right;
+  margin-right: 15%;
+  margin-top: 50px;
+  /* border: blue 1px solid; */
+}
+
+.overflow .about h1 {
+  font-size: 6rem;
+  text-align: left;
+  font-family: 'Herr Von Muellerhoff', cursive;
+  color: #c59d5f;
+  line-height: .4;
+  font-weight: 100;
+  /* border: blue 5px solid; */
+}
+
+.overflow .about h2 {
+  font-size: 3rem;
+  margin-top: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform:  uppercase;
+  color: #000;
+  /* border: blue 5px solid; */
+}
+
+.overflow .about p {
+  font-size: 2rem;
+  margin-top: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #000;
+  text-align: center;
+
+}
+
+.overflow2{
+  height: 50vh;
+  width: 100%;
+  background-color: #fff;
+}
+
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin-top: 5%;
-    transition: 1s;
-    margin-left: 10%;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 5%;
+  transition: 1s;
+  margin-left: 10%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.hours {
+  font-size: 50pt;
+  padding: 100px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+table:hover{
+  transform: scale(1.2);
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+form{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+input[type=submit] {
+
+  display: none;
   
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  .hours {
-    font-size: 50pt;
-    padding: 100px;
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
 }
-  table:hover{
-    transform: scale(1.2);
-  }
+
+
+.formContainer label{
+  font-size: 1.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.overflow3{
+  width: 100%;
+  height: 50vh;
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+}
 
-  ul.nav {
-    margin:0;
-    padding:0;
-    list-style:none;
-    height:50px; line-height:50px;
-    background:#0d7963; /* you can change the backgorund color here. */
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13px;
-  }
-  ul.nav li {
-    border-right:1px solid #189b80; /* you can change the border color matching to your background color */
-    float:left;
-  }
-  ul.nav a {
-    display:block;
-    padding:0 28px;
-    color:#ccece6;
-    text-decoration:none;
-  }
-  ul.nav a:hover,
-  ul.nav li.current a {
-    background:#086754;
-  }
-
-  .arrow{
-    transform: rotate(-90deg);
-    width: 100px;
-    margin-left: 100px;
-    background: transparent;
-  }
-
-  h1{
-    font-size: 30px;
-    font-family: 'Dela Gothic One', cursive;
-    margin-left: 200px;
-    
-  }
-  .ss{
-    font-size: 30px;
-    font-family: 'Dela Gothic One', cursive;
-    margin-left: 300px;
-    margin-top: 10px;
-  }
-  .sss{
-    font-size: 30px;
-    font-family: 'Dela Gothic One', cursive;
-    margin-left: 400px;
-    margin-top: 10px;
-  }
-  .ssss{
-    font-size: 30px;
-    font-family: 'Dela Gothic One', cursive;
-    margin-left: 500px;
-    margin-top: 10px;
-  }
-  .formContainer{
-    width: 80%;
-  }
-
-  form{
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 30px;
-  }
-
-  input[type=submit] {
-    width: 10%;
-    background-color: #0d7963;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  label[for=cityName] {
-  margin-right: 15px;
-  }
-  main {
-    padding-top: 90px;
-  }
-  .container{
-    width: 100%;
-    background-color: #f1f1f1;
-    margin: auto;
-    margin-top: 5%;
-  }
-
-  .container img{
-    width: 45%;
-    float: left;
-    margin-left: 5%;
-  }
-
-  .locations{
-    width: 40%;
-    float: left;
-    background-color: #f1f1f1;
-    margin-left: 30px;
-  }
-
-  .locations p {
-        font-size: 27px;
-  }
-  .locations h1{
-  margin-left: 0;
-  }
-
-  .btn {
-    background-color: #0d7963;
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    transition: 1s;
-    cursor: pointer;
-  }
-  .btn:hover {
-    border-radius: 5px;
-  }  
-
-  .about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #f1f1f1;
-    color: black;
-    height: 1000px;
-
-  }
-
-  .about-section h1{
-    margin-left: 0px;
-    font-size: 50px;
-  }
-
-
-  .about-section p {
-    margin-top: 25px;
-  }
-  .clr{
-    clear: both;
-  }
+.my-citys{
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+  grid-gap:2.5rem ;
+  text-align: center;
   
-  .container .images{
-    width: 90%;
-    margin-top: 20px;
-  }
+}
+.city{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 
-  .images img{
-    width: 20%;
-    margin-top: 20px;
-  }
+}
+.city h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 3rem -2px 2rem 0;
+  font-family: cursive;
+}
+.icon-container{
+  animation: pulse 3s infinite;
 
-  .contacth3 {
-    color: #270722;
-    font-size: 20pt;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
+  width: 15rem;
+  height: 15rem;
+  border: 3px solid #c59d5f;
+  background-color: #000;
+  margin-bottom: 2rem;
+  display: flex;
+  transform: rotate(0deg);
+}
+.icon-container i {
+  color: #c59d5f;
+  font-size: 5rem;
+  margin: auto;
+  transform: rotate(-45deg);
+
 }
 
-.history {
-    font-size: 15pt;
-    color: #270722;
-    margin-left: 100px;
-    margin-right: 100px;
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-}
-
-.contactlink {
-    text-decoration: none;
-    color: #270722;
-}
